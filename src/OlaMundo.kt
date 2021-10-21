@@ -1,11 +1,10 @@
 fun main(args: Array<String>) {
-    println("Ola mundo")
-    ola()
+    olaMundo()
 
 }
 
 
-fun ola(){
+fun olaMundo(){
 
     var str: String? = "Primeira função em kotlin"
     println(str?.length)
