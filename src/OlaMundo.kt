@@ -1,10 +1,20 @@
+import java.util.*
+
 fun main(args: Array<String>) {
     println("Meu primeiro programa em Kotlin:  ")
     olaMundo()
-    controleDeFluxoIfElse()
-    controleDeFluxoWhen()
-    controleDeFluxoWhile()
-    controleDeFluxoFor()
+//    controleDeFluxoIfElse()
+//    controleDeFluxoWhen()
+//    controleDeFluxoWhile()
+//    controleDeFluxoFor()
+
+//    ArraysLista()
+
+//    println(hrsAtual())
+
+    var total = soma(10, 20)
+    println(total)
+
 }
 
 
@@ -86,4 +96,58 @@ fun controleDeFluxoFor(){
         print(" $item")
     }
     println()
+}
+
+fun ArraysLista() {
+    println("----------Arrays----------")
+
+    println("Array de Strings: ")
+    var array = arrayOf("Sp", "Rj", "Bh")
+
+    for (inte in array) {
+        print("$inte ")
+    }
+    println()
+    array[0] = "Rj"
+    array[1] = "Sp"
+    for (inte1 in array) {
+        print("$inte1 ")
+    }
+    println()
+
+
+    println("Array com varios tipos de dados: ")
+    var mix = arrayOf("Sp", 9, "Rj", "Bh", 12)
+
+    for (inte1 in mix) {
+        print("$inte1 ")
+    }
+    println()
+
+    println("Array com inteiros: ")
+    var inteiros = intArrayOf(9, 12, 8, 90)
+
+    for ((index, inteiro) in inteiros.withIndex()) {
+        println("Index $index - Valor $inteiro")
+    }
+    println()
+
+    println("somando as arrays ")
+
+    var estados = arrayOf("Rs", "Sc", "Pa")
+
+    var estadosFull = estados + array
+
+    for (inte1 in estadosFull) {
+        print("$inte1 ")
+    }
+    println()
+}
+
+fun hrsAtual(): Date {
+    return Date()
+}
+
+fun soma(a: Int, b: Int): Int {
+    return a + b
 }
